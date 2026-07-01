@@ -1,10 +1,24 @@
+from core.logger import Logger
+
+
+def print_banner():
+    print("=" * 60)
+    print("               NIFTY ALGO TRADER")
+    print("=" * 60)
+
+
+def print_banner():
+    print("=" * 60)
+    print("               NIFTY ALGO TRADER")
+    print("=" * 60)
+
+
 def main():
-    print("=" * 60)
-    print("NIFTY ALGO TRADER")
-    print("=" * 60)
-    print("Project initialized successfully!")
-    print("Welcome, Thayanban!")
-    print("Version: 0.0.1")
+    print_banner()
+
+    Logger.info("Application Started")
+    Logger.info("Version : 0.0.1")
+    Logger.info("Status : Ready")
 
 
 if __name__ == "__main__":
