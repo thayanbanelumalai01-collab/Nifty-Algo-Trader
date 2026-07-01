@@ -1,10 +1,5 @@
 from core.logger import Logger
-
-
-def print_banner():
-    print("=" * 60)
-    print("               NIFTY ALGO TRADER")
-    print("=" * 60)
+from api.angel_client import AngelClient
 
 
 def print_banner():
@@ -19,6 +14,15 @@ def main():
     Logger.info("Application Started")
     Logger.info("Version : 0.0.1")
     Logger.info("Status : Ready")
+
+    client = AngelClient()
+
+    session = client.login()
+
+    if session:
+        Logger.info("Application initialized successfully.")
+    else:
+        Logger.error("Unable to login.")
 
 
 if __name__ == "__main__":
